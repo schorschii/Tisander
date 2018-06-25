@@ -1,133 +1,76 @@
 # JSONSwift
-## JSON parser in pure swift
 
-A JSON parser written from the ground up in pure Swift. It is a functional recursive descent parser.
+[![Build Status](https://travis-ci.org/mikezs/Tisander.svg?branch=master)](https://travis-ci.org/mikezs/Tisander)
+
+## Ordered JSON parser in pure swift
+
+I needed a JSON parser that has all of the items in dictionaries to be sorted to work around an issue where an existing API couldn't be changed to return objects in an array. In my quest to find this, I noticed almost all parsers used `JSONSerialization` from Apple to create their dictionaries and the dictionaries (quite correctly) has no order, but it was not consistent. Different platforms (simulator vs device) would give different orders and this is not something I could accept in my work.
+
+The parser is now pure Swift and returns an array of either `JSON.ArrayValues` or `JSON.ObjectValues` (depending on what the structure was when they were parsed). This can be accessed by subscripting a `String` or `Int` and then cast to get values. Most importantly for me, you can get .allKeys from the array of `JSON.ObjectValues` and they are sorted in the order they were in the JSON file because JSONSwift is: A JSON parser written from the ground up in pure Swift. It is a functional recursive descent parser.
 
 ### Installing
-Copy "JsonParse.swift" file into your project. Or just import the framework. That's it. :)
+
+#### Cocoapods
+
+Add this to your Podfile
+
+```
+pod 'Tisander', '~> 1.0'
+```
+
+#### Manual
+
+Copy "JSON.swift" file into your project. Or just import the framework. That's it. :)
 
 ### How to use:
 
-####  Parse JSON Object
+#### Parse JSON Object
 
-    // Data
-    
-    {
-        "MONDAY": [
-            {
-                "TITLE":   "TEST DRIVEN DEVELOPMENT",
-                "SPEAKER": "JASON SHAPIRO",
-                "TIME": "9:00 AM"
-            },
-            {
-                "TITLE": "JAVA TOOLS",
-                "SPEAKER": "JIM WHITE",
-                "TIME": "9:00 AM"
-            }
-        ],
-        "TUESDAY": [
-            {
-                "TITLE": "MONGODB",
-                "SPEAKER": "DAVINMICKELSON",
-                "TIME": "1: 00PM"
-            },
-            {
-                "TITLE": "DEBUGGINGWITHXCODE",
-                "SPEAKER": "JASONSHAPIRO",
-                "TIME": "1: 00PM",
-            }
-        ]
-    }
+```json
+// Data
 
-
-Just call the method jsonParse with the jsonData string
-
-
-    if let data : [String: AnyObject] =  jsonParse(fileContent!),
-        let monday = data["MONDAY"] as? [AnyObject]  {
-            for course in monday {
-                if let title = course["TITLE"] as? String {
-                    println(title)
-                }
-            }
-    }
-
-    
-
-
-#### Parse JSON Array
-
-
-    // Data
-    [
+{
+    "MONDAY": [
         {
-            "Name" : "Jhon"
-            "ID" : 176
-        },		
-        {
-            "Name" : "Dexter"
-            "ID" : 193
+            "TITLE":   "TEST DRIVEN DEVELOPMENT",
+            "SPEAKER": "JASON SHAPIRO",
+            "TIME": "9:00 AM"
         },
         {
-            "Name" : "Wick"
-            "ID" : 122
+            "TITLE": "JAVA TOOLS",
+            "SPEAKER": "JIM WHITE",
+            "TIME": "9:00 AM"
+        }
+    ],
+    "TUESDAY": [
+        {
+            "TITLE": "MONGODB",
+            "SPEAKER": "DAVINMICKELSON",
+            "TIME": "1: 00PM"
+        },
+        {
+            "TITLE": "DEBUGGINGWITHXCODE",
+            "SPEAKER": "JASONSHAPIRO",
+            "TIME": "1: 00PM",
         }
     ]
+}
+```
 
-Just call the method jsonParse with the jsonData string
-    
-    if let data : Array =  jsonParse(input){
-        for object in data {
-            if let elem = object as? [String: AnyObject] {
-                println(elem["Name"]!)
-                println(elem["ID"]!)
-            }
-        }
-    }
+Call the static method `JSON.parse(data:)` with the jsonData string, and use optional chaining to get the values you want:
 
-
-#### Parse twitter JSON..
-
-
-Sample twitter data from twitter search API
-
-
-    {
-        statuses: [
-            {
-            ...
-            ...
-            "text": "The tweet is here"
-            ...
-            ...
-        },
-            {
-            ...
-            ...
-            "text": "The second tweet is here"
-            ...
-            ...
-        }	
-        ]
-    }
-
-Access tweets from Json returned by twitter API
-
-
-    if let data : [String: AnyObject] = jsonParse(input), 
-        let statuses = data["statuses"] as? [AnyObject]{
-        for elem in statuses {
-
-        if let tweet = elem as? [String: AnyObject],
-            let text : String = tweet["text"] as? String {
-                println(text)
-                }
-            }
-        }
-    
+```
+JSON.parse(data: jsonData)?["MONDAY"]?.values?.forEach({ (day) in
+        print(day["TITLE"])
+    })
+```
 
 ### Authors
+
+Tisander author:
+[Mike Bignell](https://github.com/mikezs)
+
+JSONSwift authors:
 [Ankit Goel](https://github.com/ankit1ank)
 
 [Kartik Yelchuru](https://github.com/buildAI)
-
