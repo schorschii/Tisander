@@ -8,5 +8,5 @@ before_install:
 - cd Tisander
 
 script:
-- xcodebuild clean build -workspace Tisander/Tisander.xcworkspace -scheme "$SCHEME" -sdk "$SDK"
-- xcodebuild test -workspace Tisander/Tisander.xcworkspace -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" | xcpretty -c
+- xcodebuild clean build -project Tisander/Tisander.xcproject -scheme "$SCHEME" -sdk "$SDK"
+- xcodebuild test -project Tisander/Tisander.xcproject -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" | xcpretty -c
