@@ -1,6 +1,7 @@
 # JSONSwift
 
 [![Build Status](https://travis-ci.org/mikezs/Tisander.svg?branch=master)](https://travis-ci.org/mikezs/Tisander)
+[![Code Coverage](https://img.shields.io/codecov/c/github/mikezs/Tisander.svg)](https://codecov.io/gh/mikezs/Tisander)
 
 ## Ordered JSON parser in pure swift
 
