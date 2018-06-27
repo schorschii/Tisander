@@ -5,7 +5,6 @@ env:
 
 before_install:
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
-- cd Tisander
 
 script:
 - xcodebuild clean build -project Tisander/Tisander.xcproject -scheme "$SCHEME" -sdk "$SDK"
