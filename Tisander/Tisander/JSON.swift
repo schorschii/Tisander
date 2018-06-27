@@ -176,6 +176,7 @@ open class JSON {
     }
     
     //function to check colon
+    @discardableResult
     private func colonParser(_ jsonString: String, index: inout String.Index) -> String? {
         guard index != jsonString.endIndex, jsonString[index] == ":" else { return nil }
         
@@ -201,6 +202,7 @@ open class JSON {
     
     //function to check end of object
     //checks for a }
+    @discardableResult
     private func endOfSetParser(_ jsonString:String, index: inout String.Index) -> Bool? {
         guard jsonString[index] == "}" else { return nil }
         
@@ -303,12 +305,12 @@ open class JSON {
     }
     
     //method to check for  number
-    func isNumber(_ n: Character) -> Bool {
+    private func isNumber(_ n: Character) -> Bool {
         return "0" ... "9" ~= n
     }
     
     //method to consume the number
-    func consumeNumber(_ jsonString: String, index: inout String.Index) {
+    private func consumeNumber(_ jsonString: String, index: inout String.Index) {
         while isNumber(jsonString[index]) {
             guard jsonString.index(after: index) != jsonString.endIndex else { break }
             
@@ -317,7 +319,7 @@ open class JSON {
     }
     
     //number parser -- This method check all json valid numbers including exponents
-    func numberParser(_ jsonString: String, index: inout String.Index) throws -> Value? {
+    private func numberParser(_ jsonString: String, index: inout String.Index) throws -> Value? {
         
         let startingIndex = index
         
@@ -367,7 +369,7 @@ open class JSON {
     }
     
     // string parser
-    func stringParser(_ jsonString: String, index: inout String.Index) throws -> String? {
+    private func stringParser(_ jsonString: String, index: inout String.Index) throws -> String? {
         guard index != jsonString.endIndex, jsonString[index] == "\"" else { return nil }
         
         index = jsonString.index(after: index)
@@ -402,6 +404,7 @@ open class JSON {
     }
     
     //comma parser
+    @discardableResult
     private func commaParser(_ jsonString: String, index: inout String.Index) -> String? {
         guard index != jsonString.endIndex, jsonString[index] == "," else { return nil }
         

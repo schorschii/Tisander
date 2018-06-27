@@ -47,6 +47,7 @@
 		C243E6FE20E291960090BB71 /* ObjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTests.swift; sourceTree = "<group>"; };
 		C243E70020E29FDB0090BB71 /* ValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueTests.swift; sourceTree = "<group>"; };
 		C243E70220E37F0A0090BB71 /* ToStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToStringTests.swift; sourceTree = "<group>"; };
+		C243E70420E39ADD0090BB71 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +72,7 @@
 		C243E6CE20DD0BE50090BB71 = {
 			isa = PBXGroup;
 			children = (
+				C243E70420E39ADD0090BB71 /* README.md */,
 				C243E6DA20DD0BE50090BB71 /* Tisander */,
 				C243E6E520DD0BE50090BB71 /* TisanderTests */,
 				C243E6D920DD0BE50090BB71 /* Products */,

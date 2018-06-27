@@ -68,9 +68,11 @@ JSON.parse(data: jsonData)?["MONDAY"]?.values?.forEach({ (day) in
 ### Authors
 
 Tisander author:
+
 [Mike Bignell](https://github.com/mikezs)
 
 JSONSwift authors:
+
 [Ankit Goel](https://github.com/ankit1ank)
 
 [Kartik Yelchuru](https://github.com/buildAI)
