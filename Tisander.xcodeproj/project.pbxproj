@@ -7,18 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C209F8B020E51894003D1C6A /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C209F8AD20E51894003D1C6A /* JSON.swift */; };
+		C209F8BD20E5191A003D1C6A /* TisanderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C209F8B320E5191A003D1C6A /* TisanderTest.swift */; };
+		C209F8BE20E5191A003D1C6A /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C209F8B420E5191A003D1C6A /* StringTests.swift */; };
+		C209F8BF20E5191A003D1C6A /* ObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C209F8B520E5191A003D1C6A /* ObjectTests.swift */; };
+		C209F8C020E5191A003D1C6A /* NullTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C209F8B620E5191A003D1C6A /* NullTests.swift */; };
+		C209F8C120E5191A003D1C6A /* NumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C209F8B720E5191A003D1C6A /* NumberTests.swift */; };
+		C209F8C220E5191A003D1C6A /* ArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C209F8B820E5191A003D1C6A /* ArrayTests.swift */; };
+		C209F8C320E5191A003D1C6A /* BooleanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C209F8B920E5191A003D1C6A /* BooleanTests.swift */; };
+		C209F8C420E5191A003D1C6A /* ToStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C209F8BA20E5191A003D1C6A /* ToStringTests.swift */; };
+		C209F8C620E5191A003D1C6A /* ValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C209F8BC20E5191A003D1C6A /* ValueTests.swift */; };
 		C243E6E220DD0BE50090BB71 /* Tisander.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C243E6D820DD0BE50090BB71 /* Tisander.framework */; };
-		C243E6E720DD0BE50090BB71 /* TisanderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C243E6E620DD0BE50090BB71 /* TisanderTest.swift */; };
-		C243E6E920DD0BE50090BB71 /* Tisander.h in Headers */ = {isa = PBXBuildFile; fileRef = C243E6DB20DD0BE50090BB71 /* Tisander.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C243E6F320DD0D630090BB71 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C243E6F220DD0D630090BB71 /* JSON.swift */; };
-		C243E6F520E2734B0090BB71 /* NumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C243E6F420E2734B0090BB71 /* NumberTests.swift */; };
-		C243E6F720E2737B0090BB71 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C243E6F620E2737B0090BB71 /* StringTests.swift */; };
-		C243E6F920E27A660090BB71 /* ArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C243E6F820E27A660090BB71 /* ArrayTests.swift */; };
-		C243E6FB20E28EFA0090BB71 /* BooleanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C243E6FA20E28EFA0090BB71 /* BooleanTests.swift */; };
-		C243E6FD20E290D90090BB71 /* NullTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C243E6FC20E290D90090BB71 /* NullTests.swift */; };
-		C243E6FF20E291960090BB71 /* ObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C243E6FE20E291960090BB71 /* ObjectTests.swift */; };
-		C243E70120E29FDC0090BB71 /* ValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C243E70020E29FDB0090BB71 /* ValueTests.swift */; };
-		C243E70320E37F0A0090BB71 /* ToStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C243E70220E37F0A0090BB71 /* ToStringTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,22 +31,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C209F8A820E5181B003D1C6A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		C209F8A920E51824003D1C6A /* Tisander.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tisander.podspec; sourceTree = SOURCE_ROOT; };
+		C209F8AA20E51825003D1C6A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		C209F8AC20E51894003D1C6A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = SOURCE_ROOT; };
+		C209F8AD20E51894003D1C6A /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSON.swift; path = Source/JSON.swift; sourceTree = SOURCE_ROOT; };
+		C209F8AE20E51894003D1C6A /* Tisander.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tisander.h; path = Source/Tisander.h; sourceTree = SOURCE_ROOT; };
+		C209F8B320E5191A003D1C6A /* TisanderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TisanderTest.swift; path = Tests/TisanderTest.swift; sourceTree = SOURCE_ROOT; };
+		C209F8B420E5191A003D1C6A /* StringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringTests.swift; path = Tests/StringTests.swift; sourceTree = SOURCE_ROOT; };
+		C209F8B520E5191A003D1C6A /* ObjectTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObjectTests.swift; path = Tests/ObjectTests.swift; sourceTree = SOURCE_ROOT; };
+		C209F8B620E5191A003D1C6A /* NullTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NullTests.swift; path = Tests/NullTests.swift; sourceTree = SOURCE_ROOT; };
+		C209F8B720E5191A003D1C6A /* NumberTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumberTests.swift; path = Tests/NumberTests.swift; sourceTree = SOURCE_ROOT; };
+		C209F8B820E5191A003D1C6A /* ArrayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArrayTests.swift; path = Tests/ArrayTests.swift; sourceTree = SOURCE_ROOT; };
+		C209F8B920E5191A003D1C6A /* BooleanTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BooleanTests.swift; path = Tests/BooleanTests.swift; sourceTree = SOURCE_ROOT; };
+		C209F8BA20E5191A003D1C6A /* ToStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToStringTests.swift; path = Tests/ToStringTests.swift; sourceTree = SOURCE_ROOT; };
+		C209F8BB20E5191A003D1C6A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tests/Info.plist; sourceTree = SOURCE_ROOT; };
+		C209F8BC20E5191A003D1C6A /* ValueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ValueTests.swift; path = Tests/ValueTests.swift; sourceTree = SOURCE_ROOT; };
 		C243E6D820DD0BE50090BB71 /* Tisander.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tisander.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C243E6DB20DD0BE50090BB71 /* Tisander.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tisander.h; sourceTree = "<group>"; };
-		C243E6DC20DD0BE50090BB71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C243E6E120DD0BE50090BB71 /* TisanderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TisanderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C243E6E620DD0BE50090BB71 /* TisanderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TisanderTest.swift; sourceTree = "<group>"; };
-		C243E6E820DD0BE50090BB71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C243E6F220DD0D630090BB71 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
-		C243E6F420E2734B0090BB71 /* NumberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTests.swift; sourceTree = "<group>"; };
-		C243E6F620E2737B0090BB71 /* StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
-		C243E6F820E27A660090BB71 /* ArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTests.swift; sourceTree = "<group>"; };
-		C243E6FA20E28EFA0090BB71 /* BooleanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooleanTests.swift; sourceTree = "<group>"; };
-		C243E6FC20E290D90090BB71 /* NullTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullTests.swift; sourceTree = "<group>"; };
-		C243E6FE20E291960090BB71 /* ObjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTests.swift; sourceTree = "<group>"; };
-		C243E70020E29FDB0090BB71 /* ValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueTests.swift; sourceTree = "<group>"; };
-		C243E70220E37F0A0090BB71 /* ToStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToStringTests.swift; sourceTree = "<group>"; };
-		C243E70420E39ADD0090BB71 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,13 +70,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C209F8AB20E51838003D1C6A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C209F8AC20E51894003D1C6A /* Info.plist */,
+				C209F8AD20E51894003D1C6A /* JSON.swift */,
+				C209F8AE20E51894003D1C6A /* Tisander.h */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		C209F8B220E51900003D1C6A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C209F8B820E5191A003D1C6A /* ArrayTests.swift */,
+				C209F8B920E5191A003D1C6A /* BooleanTests.swift */,
+				C209F8BB20E5191A003D1C6A /* Info.plist */,
+				C209F8B620E5191A003D1C6A /* NullTests.swift */,
+				C209F8B720E5191A003D1C6A /* NumberTests.swift */,
+				C209F8B520E5191A003D1C6A /* ObjectTests.swift */,
+				C209F8B420E5191A003D1C6A /* StringTests.swift */,
+				C209F8B320E5191A003D1C6A /* TisanderTest.swift */,
+				C209F8BA20E5191A003D1C6A /* ToStringTests.swift */,
+				C209F8BC20E5191A003D1C6A /* ValueTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		C243E6CE20DD0BE50090BB71 = {
 			isa = PBXGroup;
 			children = (
-				C243E70420E39ADD0090BB71 /* README.md */,
-				C243E6DA20DD0BE50090BB71 /* Tisander */,
-				C243E6E520DD0BE50090BB71 /* TisanderTests */,
+				C209F8A820E5181B003D1C6A /* LICENSE */,
 				C243E6D920DD0BE50090BB71 /* Products */,
+				C209F8AA20E51825003D1C6A /* README.md */,
+				C209F8AB20E51838003D1C6A /* Source */,
+				C209F8B220E51900003D1C6A /* Tests */,
+				C209F8A920E51824003D1C6A /* Tisander.podspec */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,33 +118,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C243E6DA20DD0BE50090BB71 /* Tisander */ = {
-			isa = PBXGroup;
-			children = (
-				C243E6DB20DD0BE50090BB71 /* Tisander.h */,
-				C243E6DC20DD0BE50090BB71 /* Info.plist */,
-				C243E6F220DD0D630090BB71 /* JSON.swift */,
-			);
-			path = Tisander;
-			sourceTree = "<group>";
-		};
-		C243E6E520DD0BE50090BB71 /* TisanderTests */ = {
-			isa = PBXGroup;
-			children = (
-				C243E6F820E27A660090BB71 /* ArrayTests.swift */,
-				C243E6FA20E28EFA0090BB71 /* BooleanTests.swift */,
-				C243E6E820DD0BE50090BB71 /* Info.plist */,
-				C243E6FC20E290D90090BB71 /* NullTests.swift */,
-				C243E6F420E2734B0090BB71 /* NumberTests.swift */,
-				C243E6FE20E291960090BB71 /* ObjectTests.swift */,
-				C243E6F620E2737B0090BB71 /* StringTests.swift */,
-				C243E6E620DD0BE50090BB71 /* TisanderTest.swift */,
-				C243E70220E37F0A0090BB71 /* ToStringTests.swift */,
-				C243E70020E29FDB0090BB71 /* ValueTests.swift */,
-			);
-			path = TisanderTests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -122,7 +125,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C243E6E920DD0BE50090BB71 /* Tisander.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +183,7 @@
 					};
 					C243E6E020DD0BE50090BB71 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -224,7 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C243E6F320DD0D630090BB71 /* JSON.swift in Sources */,
+				C209F8B020E51894003D1C6A /* JSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,15 +235,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C243E6FD20E290D90090BB71 /* NullTests.swift in Sources */,
-				C243E6F520E2734B0090BB71 /* NumberTests.swift in Sources */,
-				C243E70320E37F0A0090BB71 /* ToStringTests.swift in Sources */,
-				C243E6F920E27A660090BB71 /* ArrayTests.swift in Sources */,
-				C243E70120E29FDC0090BB71 /* ValueTests.swift in Sources */,
-				C243E6F720E2737B0090BB71 /* StringTests.swift in Sources */,
-				C243E6E720DD0BE50090BB71 /* TisanderTest.swift in Sources */,
-				C243E6FF20E291960090BB71 /* ObjectTests.swift in Sources */,
-				C243E6FB20E28EFA0090BB71 /* BooleanTests.swift in Sources */,
+				C209F8C020E5191A003D1C6A /* NullTests.swift in Sources */,
+				C209F8BE20E5191A003D1C6A /* StringTests.swift in Sources */,
+				C209F8C620E5191A003D1C6A /* ValueTests.swift in Sources */,
+				C209F8C120E5191A003D1C6A /* NumberTests.swift in Sources */,
+				C209F8C420E5191A003D1C6A /* ToStringTests.swift in Sources */,
+				C209F8C220E5191A003D1C6A /* ArrayTests.swift in Sources */,
+				C209F8BD20E5191A003D1C6A /* TisanderTest.swift in Sources */,
+				C209F8BF20E5191A003D1C6A /* ObjectTests.swift in Sources */,
+				C209F8C320E5191A003D1C6A /* BooleanTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,8 +389,9 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Tisander/Info.plist;
+				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -407,15 +411,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = TT9J7U467L;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Tisander/Info.plist;
+				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -434,9 +439,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 35SLL4TJ4J;
-				INFOPLIST_FILE = TisanderTests/Info.plist;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = TT9J7U467L;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -444,6 +450,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bignell.TisanderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -453,9 +461,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 35SLL4TJ4J;
-				INFOPLIST_FILE = TisanderTests/Info.plist;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = TT9J7U467L;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -463,6 +473,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bignell.TisanderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

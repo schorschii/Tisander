@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/mikezs/Tisander.svg?branch=master)](https://travis-ci.org/mikezs/Tisander)
 [![Code Coverage](https://img.shields.io/codecov/c/github/mikezs/Tisander.svg)](https://codecov.io/gh/mikezs/Tisander)
+[![Documentation](https://mikezs.github.io/Tisander/badge.svg)](https://mikezs.github.io/Tisander)
 [![CocoaPods](https://img.shields.io/cocoapods/dt/Tisander.svg)](https://cocoapods.org/pods/Tisander)
 [![Swift](https://img.shields.io/badge/Swift-4.1-orange.svg)](https://swift.org)
 [![Xcode](https://img.shields.io/badge/Xcode-9.4-blue.svg)](https://developer.apple.com/xcode)

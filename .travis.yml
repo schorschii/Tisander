@@ -7,8 +7,8 @@ before_install:
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 
 script:
-- xcodebuild clean build -project Tisander/Tisander.xcodeproj -scheme "$SCHEME" -sdk "$SDK"
-- xcodebuild test -project Tisander/Tisander.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" | xcpretty -c
+- xcodebuild clean build -workspace Tisander.xcworkspace -scheme "$SCHEME" -sdk "$SDK"
+- xcodebuild test -workspace Tisander.xcworkspace -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" | xcpretty -c
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)

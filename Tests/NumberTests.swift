@@ -151,4 +151,16 @@ class NumberTests: TisanderTest {
             XCTAssertEqual(e as? SerializationError, SerializationError.invalidArrayElement)
         }
     }
+    
+    func testOnlyDash() {
+        let input = """
+[-
+"""
+        do {
+            let json = try JSON.parse(string: input)
+            XCTFail("json is \(json)")
+        } catch let e {
+            XCTAssertEqual(e as? SerializationError, SerializationError.invalidArrayElement)
+        }
+    }
 }

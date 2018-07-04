@@ -81,9 +81,30 @@ class ToStringTests: TisanderTest {
         XCTAssertEqual(toString(input: input), input)
     }
     
+    func testEmptyArray() {
+        let input = """
+[]
+"""
+        XCTAssertEqual(toString(input: input), input)
+    }
+    
     func testObject() {
         let input = """
 {"null":null,"int":1,"double":0.1,"array":[],"object":{}}
+"""
+        XCTAssertEqual(toString(input: input), input)
+    }
+    
+    func testArrayOfEmptyArrays() {
+        let input = """
+[[],[],[]]
+"""
+        XCTAssertEqual(toString(input: input), input)
+    }
+    
+    func testArrayOfEmptyObjects() {
+        let input = """
+[{},{},{}]
 """
         XCTAssertEqual(toString(input: input), input)
     }

@@ -41,4 +41,16 @@ class BooleanTests: TisanderTest {
             XCTAssertEqual(e as? SerializationError, SerializationError.invalidJSON)
         }
     }
+    
+    func testPartialBoolean() {
+        let input = """
+[tru
+"""
+        do {
+            _ = try JSON.parse(string: input)
+            XCTFail()
+        } catch let e {
+            XCTAssertEqual(e as? SerializationError, SerializationError.invalidArrayElement)
+        }
+    }
 }
