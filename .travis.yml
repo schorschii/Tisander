@@ -1,0 +1,14 @@
+language: swift
+osx_image: xcode9.4
+env:
+  - DESTINATION="OS=11.4,name=iPhone X" SCHEME="Tisander" SDK=iphonesimulator11.4
+
+before_install:
+- gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+
+script:
+- xcodebuild clean build -workspace Tisander.xcworkspace -scheme "$SCHEME" -sdk "$SDK"
+- xcodebuild test -workspace Tisander.xcworkspace -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" | xcpretty -c
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
