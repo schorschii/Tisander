@@ -1,4 +1,4 @@
-# JSONSwift
+# Tisander
 
 [![Build Status](https://travis-ci.org/mikezs/Tisander.svg?branch=master)](https://travis-ci.org/mikezs/Tisander)
 [![Code Coverage](https://img.shields.io/codecov/c/github/mikezs/Tisander.svg)](https://codecov.io/gh/mikezs/Tisander)
@@ -8,15 +8,15 @@
 [![Xcode](https://img.shields.io/badge/Xcode-9.4-blue.svg)](https://developer.apple.com/xcode)
 [![MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
 
-## Ordered JSON parser in pure swift
+## Ordered JSON parser in pure Swift
 
 I needed a JSON parser that has all of the items in dictionaries to be sorted to work around an issue where an existing API couldn't be changed to return objects in an array. In my quest to find this, I noticed almost all parsers used `JSONSerialization` from Apple to create their dictionaries and the dictionaries (quite correctly) has no order, but it was not consistent. Different platforms (simulator vs device) would give different orders and this is not something I could accept in my work.
 
 The parser is now pure Swift and returns an array of either `JSON.ArrayValues` or `JSON.ObjectValues` (depending on what the structure was when they were parsed). This can be accessed by subscripting a `String` or `Int` and then cast to get values. Most importantly for me, you can get .allKeys from the array of `JSON.ObjectValues` and they are sorted in the order they were in the JSON file because JSONSwift is: A JSON parser written from the ground up in pure Swift. It is a functional recursive descent parser.
 
-### Installing
+## Installing
 
-#### Cocoapods
+### Cocoapods
 
 Add this to your Podfile
 
@@ -24,60 +24,65 @@ Add this to your Podfile
 pod 'Tisander', '~> 1.0'
 ```
 
-#### Manual
+### Manual
 
-Copy "JSON.swift" file into your project. Or just import the framework. That's it. :)
+Copy `JSON.swift` file into your project. Or just import the framework. That's it. :)
 
-### How to use:
+## How to use:
 
-#### Parse JSON Object
+### Parse JSON Object
 
-```json
+```swift
 // Data
-
+let jsonString = """
 {
-    "MONDAY": [
+    "Monday": [
         {
-            "TITLE":   "TEST DRIVEN DEVELOPMENT",
-            "SPEAKER": "JASON SHAPIRO",
-            "TIME": "9:00 AM"
+            "title": "Test Driven Development",
+            "speaker": "Jason Shapiro",
+            "time": "9:00 AM"
         },
         {
-            "TITLE": "JAVA TOOLS",
-            "SPEAKER": "JIM WHITE",
-            "TIME": "9:00 AM"
+            "title": "Java Tools",
+            "speaker": "Jim White",
+            "time": "9:00 AM"
         }
     ],
-    "TUESDAY": [
+    "Tuesday": [
         {
-            "TITLE": "MONGODB",
-            "SPEAKER": "DAVINMICKELSON",
-            "TIME": "1: 00PM"
+            "title": "MongoDB",
+            "speaker": "Davin Mickleson",
+            "time": "1:00 PM"
         },
         {
-            "TITLE": "DEBUGGINGWITHXCODE",
-            "SPEAKER": "JASONSHAPIRO",
-            "TIME": "1: 00PM",
+            "title": "Debugging with Xcode",
+            "speaker": "Jason Shapiro",
+            "time": "1:00 PM",
         }
     ]
 }
+"""
 ```
 
-Call the static method `JSON.parse(data:)` with the jsonData string, and use optional chaining to get the values you want:
+Call the static method `JSON.parse(string:)` with the jsonString string, and use optional chaining to get the values you want:
 
+```swift
+JSON.parse(string: jsonString)?["Monday"]?.values?.forEach({ (day) in
+    print(day["title"])
+})
+
+// Prints:
+//  Test Driven Development
+//  Java Tools
 ```
-JSON.parse(data: jsonData)?["MONDAY"]?.values?.forEach({ (day) in
-        print(day["TITLE"])
-    })
-```
 
-### Authors
+## Authors
 
-Tisander author:
+#### Tisander author:
 
 [Mike Bignell](https://github.com/mikezs)
 
-JSONSwift authors:
+#### JSONSwift authors:
 
 [Ankit Goel](https://github.com/ankit1ank)
 
