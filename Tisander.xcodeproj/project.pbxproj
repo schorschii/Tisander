@@ -18,6 +18,7 @@
 		C209F8C420E5191A003D1C6A /* ToStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C209F8BA20E5191A003D1C6A /* ToStringTests.swift */; };
 		C209F8C620E5191A003D1C6A /* ValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C209F8BC20E5191A003D1C6A /* ValueTests.swift */; };
 		C243E6E220DD0BE50090BB71 /* Tisander.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C243E6D820DD0BE50090BB71 /* Tisander.framework */; };
+		C2ED7BD120EE0C690077094B /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ED7BD020EE0C690077094B /* ExampleTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		C209F8BC20E5191A003D1C6A /* ValueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ValueTests.swift; path = Tests/ValueTests.swift; sourceTree = SOURCE_ROOT; };
 		C243E6D820DD0BE50090BB71 /* Tisander.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tisander.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C243E6E120DD0BE50090BB71 /* TisanderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TisanderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2ED7BD020EE0C690077094B /* ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			children = (
 				C209F8B820E5191A003D1C6A /* ArrayTests.swift */,
 				C209F8B920E5191A003D1C6A /* BooleanTests.swift */,
+				C2ED7BD020EE0C690077094B /* ExampleTests.swift */,
 				C209F8BB20E5191A003D1C6A /* Info.plist */,
 				C209F8B620E5191A003D1C6A /* NullTests.swift */,
 				C209F8B720E5191A003D1C6A /* NumberTests.swift */,
@@ -239,6 +242,7 @@
 				C209F8BE20E5191A003D1C6A /* StringTests.swift in Sources */,
 				C209F8C620E5191A003D1C6A /* ValueTests.swift in Sources */,
 				C209F8C120E5191A003D1C6A /* NumberTests.swift in Sources */,
+				C2ED7BD120EE0C690077094B /* ExampleTests.swift in Sources */,
 				C209F8C420E5191A003D1C6A /* ToStringTests.swift in Sources */,
 				C209F8C220E5191A003D1C6A /* ArrayTests.swift in Sources */,
 				C209F8BD20E5191A003D1C6A /* TisanderTest.swift in Sources */,

@@ -57,7 +57,7 @@ let jsonString = """
         {
             "title": "Debugging with Xcode",
             "speaker": "Jason Shapiro",
-            "time": "1:00 PM",
+            "time": "1:00 PM"
         }
     ]
 }
@@ -67,8 +67,24 @@ let jsonString = """
 Call the static method `JSON.parse(string:)` with the jsonString string, and use optional chaining to get the values you want:
 
 ```swift
-JSON.parse(string: jsonString)?["Monday"]?.values?.forEach({ (day) in
-    print(day["title"])
+var parsedJSON: Value?
+
+do {
+    parsedJSON = try JSON.parse(string: jsonString)
+} catch let error {
+    print("Could not parse JSON because of error: \(error)")
+}
+
+let keys = parsedJSON?.keys
+print(keys?.joined(separator: ", ") ?? "")
+
+// Prints:
+//  Monday, Tuesday
+
+let mondayValues = parsedJSON?["Monday"]?.values
+
+mondayValues?.forEach({ (day) in
+    print((day["title"] as? String) ?? "")
 })
 
 // Prints:
