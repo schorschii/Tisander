@@ -80,7 +80,7 @@ public extension Value {
      - parameter key: key for value
      - returns: value for key. Also returns nil if it is not a key/value structure
      */
-    public subscript(key: String) -> Value? {
+    subscript(key: String) -> Value? {
         get {
             return (self as? [JSON.ObjectElement])?.reduce(nil, { (result, element) -> Value? in
                 guard result == nil else { return result }
@@ -94,7 +94,7 @@ public extension Value {
      - parameter index: index to retrieve
      - returns: value if index is valid and the subject is an array of `JSON.ArrayElement`s
      */
-    public subscript(index: Int) -> Value? {
+    subscript(index: Int) -> Value? {
         get {
             guard let elementArray = self as? [JSON.ArrayElement],
                 index >= 0,
@@ -106,13 +106,22 @@ public extension Value {
     }
     
     /// Get all keys in the key/value set, returns nil if the array is not keys/values.
-    public var keys: [String]? {
+    var keys: [String]? {
         return (self as? [JSON.ObjectElement])?.compactMap { $0.key }
     }
     
     /// Get all values in the current structure
-    public var values: [Value]? {
+    var values: [Value]? {
         return (self as? [JSON.ArrayElement])?.map { $0.value } ?? (self as? [JSON.ObjectElement])?.map { $0.value }
+    }
+    
+    func asInt() -> Int {
+        if let value = self as? Int {
+            return value
+        } else if let value = self as? String {
+            return Int(value) ?? -1
+        }
+        return -1
     }
 }
 
@@ -201,6 +210,15 @@ open class JSON {
         let key: String
         /// Object element value
         let value: Value & JSONStringRepresentable
+    }
+    
+    public static func parse(data: Data) throws -> Value {
+        let str = String(data: data, encoding: .utf8)
+        if let str = str {
+            return try JSON.parse(string: str)
+        } else {
+            throw SerializationError.invalidJSON
+        }
     }
     
     /**
