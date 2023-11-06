@@ -47,7 +47,18 @@ class StringTests: TisanderTest {
         var json: Value
         do { json = try JSON.parse(string: input) } catch let e { XCTFail((e as? SerializationError)?.rawValue ?? "Unknown exception"); return }
         
-        XCTAssertEqual(json[0] as? String, "\\\"")
+        XCTAssertEqual(json[0] as? String, "\"")
+    }
+    
+    func testEscapedCharsString() {
+        let input = """
+["\\n", "\\u00fc"]
+"""
+        var json: Value
+        do { json = try JSON.parse(string: input) } catch let e { XCTFail((e as? SerializationError)?.rawValue ?? "Unknown exception"); return }
+        
+        XCTAssertEqual(json[0] as? String, "\n")
+        XCTAssertEqual(json[1] as? String, "ü")
     }
     
 //    func testEscapedSlashString() {
