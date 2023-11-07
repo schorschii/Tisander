@@ -615,14 +615,15 @@ open class JSON {
         }
         
         var parsedString = String(jsonString[startingIndex ..< index])
+            .replacingOccurrences(of: "\\/", with: "/", range: nil)
             .replacingOccurrences(of: "\\\\", with: "\\", range: nil)
             .replacingOccurrences(of: "\\n", with: "\n", range: nil)
             .replacingOccurrences(of: "\\t", with: "\t", range: nil)
             .replacingOccurrences(of: "\\r", with: "\r", range: nil)
             .replacingOccurrences(of: "\\\"", with: "\"", range: nil)
-        if let regex = try? NSRegularExpression(pattern: "\\\\u[0-9A-Fa-f]{4}") {
+        if let hexEncodedUnicodeCharRegex = try? NSRegularExpression(pattern: "\\\\u[0-9A-Fa-f]{4}") {
             let parsedStringNs = parsedString as NSString
-            for match in regex.matches(in: parsedString, range: NSMakeRange(0, parsedStringNs.length)) {
+            for match in hexEncodedUnicodeCharRegex.matches(in: parsedString, range: NSMakeRange(0, parsedStringNs.length)) {
                 let matchString = parsedStringNs.substring(with: match.range) as String
                 let matchStringHex = matchString.suffix(4)
                 var replaceData = Data()

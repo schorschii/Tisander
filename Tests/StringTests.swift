@@ -40,14 +40,18 @@ class StringTests: TisanderTest {
         XCTAssertEqual(json[0] as? String, "\\a")
     }
     
-    func testEscapedQuoteString() {
+    func testEscapedCharsString() {
         let input = """
-["\\\""]
+["\\n", "\\t", "\\r", "\\\"", "\\u00fc"]
 """
         var json: Value
         do { json = try JSON.parse(string: input) } catch let e { XCTFail((e as? SerializationError)?.rawValue ?? "Unknown exception"); return }
         
-        XCTAssertEqual(json[0] as? String, "\\\"")
+        XCTAssertEqual(json[0] as? String, "\n")
+        XCTAssertEqual(json[1] as? String, "\t")
+        XCTAssertEqual(json[2] as? String, "\r")
+        XCTAssertEqual(json[3] as? String, "\"")
+        XCTAssertEqual(json[4] as? String, "ü")
     }
     
 //    func testEscapedSlashString() {
