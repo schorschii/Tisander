@@ -597,6 +597,7 @@ open class JSON {
         }
         
         var parsedString = String(jsonString[startingIndex ..< index])
+            .replacingOccurrences(of: "\\/", with: "/", range: nil)
             .replacingOccurrences(of: "\\\\", with: "\\", range: nil)
             .replacingOccurrences(of: "\\n", with: "\n", range: nil)
             .replacingOccurrences(of: "\\t", with: "\t", range: nil)
