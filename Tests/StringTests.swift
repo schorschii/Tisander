@@ -55,10 +55,20 @@ class StringTests: TisanderTest {
         XCTAssertEqual(json[5] as? String, "\\")
     }
     
-    func testEscapedSlashString() {
+    func testUnterminatedStringError() {
         // invalid JSON ["a\b\"] should throw SerializationError.unterminatedString
         let input = """
 ["a\\b\\"]
+"""
+        XCTAssertThrowsError(try JSON.parse(string: input)) { error in
+            XCTAssertEqual(error as! SerializationError, SerializationError.unterminatedString)
+        }
+    }
+    
+    func testUnterminatedStringError2() {
+        // invalid JSON ["a\\\"] should throw SerializationError.unterminatedString
+        let input = """
+["a\\\\\\"]
 """
         XCTAssertThrowsError(try JSON.parse(string: input)) { error in
             XCTAssertEqual(error as! SerializationError, SerializationError.unterminatedString)

@@ -599,12 +599,9 @@ open class JSON {
         let startingIndex = index
         
         while index != jsonString.endIndex {
-            
-            if jsonString[index] == "\\"
-                && jsonString[jsonString.index(before: index)] != "\\" {
+            if jsonString[index] == "\\" {
                 index = jsonString.index(after: index)
-                
-                if jsonString[index] == "\"" {
+                if jsonString[index] == "\"" || jsonString[index] == "\\" {
                     index = jsonString.index(after: index)
                 } else {
                     continue
