@@ -80,7 +80,7 @@ public extension Value {
      - parameter key: key for value
      - returns: value for key. Also returns nil if it is not a key/value structure
      */
-    subscript(key: String) -> Value? {
+    public subscript(key: String) -> Value? {
         get {
             return (self as? [JSON.ObjectElement])?.reduce(nil, { (result, element) -> Value? in
                 guard result == nil else { return result }
@@ -94,7 +94,7 @@ public extension Value {
      - parameter index: index to retrieve
      - returns: value if index is valid and the subject is an array of `JSON.ArrayElement`s
      */
-    subscript(index: Int) -> Value? {
+    public subscript(index: Int) -> Value? {
         get {
             guard let elementArray = self as? [JSON.ArrayElement],
                 index >= 0,
@@ -106,22 +106,13 @@ public extension Value {
     }
     
     /// Get all keys in the key/value set, returns nil if the array is not keys/values.
-    var keys: [String]? {
+    public var keys: [String]? {
         return (self as? [JSON.ObjectElement])?.compactMap { $0.key }
     }
     
     /// Get all values in the current structure
-    var values: [Value]? {
+    public var values: [Value]? {
         return (self as? [JSON.ArrayElement])?.map { $0.value } ?? (self as? [JSON.ObjectElement])?.map { $0.value }
-    }
-    
-    func asInt() -> Int {
-        if let value = self as? Int {
-            return value
-        } else if let value = self as? String {
-            return Int(value) ?? -1
-        }
-        return -1
     }
 }
 
